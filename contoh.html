@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Saya</title>
+    <style>
+        /* Styling untuk kontainer skill */
+        .skill-container {
+            width: 100%;
+            background-color: #ddd;
+            border-radius: 8px;
+            margin: 10px 0;
+        }
+
+        /* Styling untuk bar yang akan dianimasikan */
+        .skill-bar {
+            height: 30px;  /* Tinggi bar */
+            width: 0;  /* Dimulai dengan lebar 0 */
+            background-color: #4caf50;  /* Warna hijau untuk bar */
+            border-radius: 8px;
+            text-align: center;
+            color: white;
+            line-height: 30px;  /* Menjaga teks agar tetap berada di tengah bar */
+            font-weight: bold;
+        }
+
+        /* Animasi untuk meningkatkan lebar bar */
+        @keyframes fillSkillBar {
+            from {
+                width: 0%;
+            }
+            to {
+                width: var(--skill-width); /* Gunakan variabel CSS untuk menentukan lebar */
+            }
+        }
+
+        /* Terapkan animasi ke .skill-bar */
+        .skill-bar {
+            animation: fillSkillBar 2s ease-out forwards;
+        }
+
+        /* Customizing each skill bar based on the percentage */
+        .word .skill-bar {
+            --skill-width: 80%; /* 80% untuk Word */
+            background-color: #f44336; /* Red for Word */
+        }
+
+        .excel .skill-bar {
+            --skill-width: 85%; /* 85% untuk Excel */
+            background-color: #2196F3; /* Blue for Excel */
+        }
+
+        .canva .skill-bar {
+            --skill-width: 70%; /* 70% untuk kemampuan lain */
+            background-color: #FFEB3B; /* Yellow for Other Skills */
+        }
+    </style>
+</head>
+<body>
+
+    <section id="skills">
+        <h2>Skil/Kemampuan</h2>
+
+        <!-- Word Skill -->
+        <div class="skill-container word">
+            <div class="skill-bar">80%</div>
+        </div>
+
+        <!-- Excel Skill -->
+        <div class="skill-container excel">
+            <div class="skill-bar">85%</div>
+        </div>
+
+        <div class="skill-container canva">
+            <div class="skill-bar">85%</div>
+        </div>
+
+    </section>
+
+</body>
+</html>

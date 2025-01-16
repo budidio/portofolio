@@ -1,0 +1,229 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and general layout */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Header */
+header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+header h1 {
+    font-size: 2.5rem;
+}
+details {
+    margin: 10px 0;
+}
+
+summary {
+    font-weight: bold;
+    cursor: pointer;
+    padding: 0;
+    font-size: 12px;
+}
+
+/* Gaya untuk daftar jobdesk */
+.jobdesk-list {
+    padding-left: 30px; /* Memberikan jarak kiri untuk indentasi */
+}
+
+/* Gaya untuk item dalam daftar */
+.jobdesk-list li {
+    margin-bottom: 8px; /* Memberikan jarak antar item */
+    line-height: 1.5;  /* Jarak antar baris teks */
+}
+
+/* Menambahkan efek ketika menampilkan jobdesk */
+details[open] summary {
+    color: #4CAF50; /* Mengubah warna teks menjadi hijau saat dropdown terbuka */
+}
+
+/* Profile Header: Foto, Nama, Umur */
+.profile-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    border-radius: 10%;
+    margin-right: 20px;
+}
+
+.profile-header .profile-info {
+    font-size: 1.2rem;
+}
+
+/* Container layout */
+.container {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+}
+
+/* Kolom Kiri: Menu Navigasi */
+.menu {
+    width: 25%;
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.menu h2 {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.menu ul {
+    list-style-type: none;
+}
+
+.menu ul li {
+    margin: 10px 0;
+    padding: 2px;
+}
+
+.menu ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.menu ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Kolom Kanan: Penjelasan Detail */
+.content {
+    width: 70%;
+    border-radius: 8px;
+}
+.content2 {
+    width: 100%;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+section ul {
+    list-style-type: none;
+}
+.skill-container {
+    width: 100%;
+    background-color: #ddd;
+    border-radius: 8px;
+    margin: 10px 0;
+}
+.skill-bar {
+    height: 30px;  /* Tinggi bar */
+    width: 0;  /* Dimulai dengan lebar 0 */
+    background-color: #4caf50;  /* Warna hijau untuk bar */
+    border-radius: 8px;
+    text-align: center;
+    color: white;
+    line-height: 30px;  /* Menjaga teks agar tetap berada di tengah bar */
+    font-weight: bold;
+}
+/* Animasi untuk meningkatkan lebar bar */
+@keyframes fillSkillBar {
+    from{
+        width: 0%;
+    }
+    to {
+        width: var(--skill-width); /* Gunakan variabel CSS untuk menentukan lebar */
+    }
+}
+/* Terapkan animasi ke .skill-bar */
+.skill-bar {
+    animation: fillSkillBar 2s ease-out forwards;
+}
+/* Customizing each skill bar based on the percentage */
+.corel .skill-bar {
+    --skill-width: 65%; /* 80% untuk Word */
+    background-color: #a9a9a9; /* Red for Word */
+}
+.canva .skill-bar {
+    --skill-width: 60%; /* 80% untuk Word */
+    background-color: #a9a9a9; /* Red for Word */
+}
+.html .skill-bar {
+    --skill-width: 55%; /* 80% untuk Word */
+    background-color: #a9a9a9; /* Red for Word */
+}
+.excel .skill-bar {
+    --skill-width: 89%; /* 80% untuk Word */
+    background-color: #a9a9a9; /* Red for Word */
+}
+.powerpoint .skill-bar {
+    --skill-width: 65%; /* 80% untuk Word */
+    background-color: #a9a9a9; /* Red for Word */
+}
+.word .skill-bar {
+    --skill-width: 90%; /* 80% untuk Word */
+    background-color: #a9a9a9; /* Red for Word */
+}
+.photoshop .skill-bar {
+    --skill-width: 50%; /* 80% untuk Word */
+    background-color: #a9a9a9; /* Red for Word */
+}
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 40px;
+}
+
+/* Mobile responsiveness */
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu, .content {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+
+    .profile-header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .profile-header .photo img {
+        margin-bottom: 10px;
+    }
+    .menu h2,
+    .menu ul {
+        display: none;
+    }
+}
+
