@@ -173,7 +173,7 @@ section ul {
     background-color: #a9a9a9; /* Red for Word */
 }
 .html .skill-bar {
-    --skill-width: 55%; /* 80% untuk Word */
+    --skill-width: 70%; /* 80% untuk Word */
     background-color: #a9a9a9; /* Red for Word */
 }
 .excel .skill-bar {
