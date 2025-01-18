@@ -16,7 +16,16 @@
             <div class="content" style="width: 100%; text-align: center;">
                 <img src="Untitled.jpg"><br>
                 <h3>Budi Darmawan</h3>
-                <h3>24 Tahun</h3>
+                <h3><span id="umur"></span></h3>
+                <script>
+                    const tanggalLahir = new Date(2000, 3, 22);
+                    const sekarang = new Date();
+                    let umur = sekarang.getFullYear() - tanggalLahir.getFullYear();
+                    const bulan = sekarang.getMonth() - tanggalLahir.getMonth();
+                    if (bulan < 0 || (bulan === 0 && sekarang.getDate() < tanggalLahir.getDate())) {
+                        umur--;
+                    } document.getElementById("umur").textContent = umur
+                </script>
             </div>
             <hr>
             <ul>
