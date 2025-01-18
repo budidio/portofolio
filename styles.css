@@ -165,11 +165,11 @@ section ul {
 }
 /* Customizing each skill bar based on the percentage */
 .corel .skill-bar {
-    --skill-width: 65%; /* 80% untuk Word */
+    --skill-width: 80%; /* 80% untuk Word */
     background-color: #a9a9a9; /* Red for Word */
 }
 .canva .skill-bar {
-    --skill-width: 60%; /* 80% untuk Word */
+    --skill-width: 85%; /* 80% untuk Word */
     background-color: #a9a9a9; /* Red for Word */
 }
 .html .skill-bar {
